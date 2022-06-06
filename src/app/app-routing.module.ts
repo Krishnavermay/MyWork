@@ -11,17 +11,46 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'home',
+    path: '',
     data: {
-      title: 'home'
+      title: 'Layout'
     },
     children: [
       {
-        path: '',
-      loadChildren: () => import('./modules/home-page/home-page.module').then(m => m.HomePageModule)
+        path: 'login',
+        loadChildren: () => import('./modules/login/login.module').then(m => m.LoginModule)
+      },
+      {
+        path: 'home',
+        loadChildren: () => import('./modules/home-page/home-page.module').then(m => m.HomePageModule)
       }
     ]
   },
+  // {
+  //   path: 'login',
+  //   data: {
+  //     title: 'login'
+  //   },
+  //   children: [
+  //     {
+  //       path: '',
+  //       loadChildren: () => import('./modules/login/login.module').then(m => m.LoginModule)
+  //     }
+  //   ]
+  // },
+  // {
+//     {
+//     path: 'home',
+//     data: {
+//       title: 'home'
+//     },
+//     children: [
+//       {
+//         path: '',
+//         loadChildren: () => import('./modules/home-page/home-page.module').then(m => m.HomePageModule)
+//       }
+//     ]
+//   },
 
 ];
 

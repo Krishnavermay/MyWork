@@ -3,22 +3,23 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomePageComponent } from './modules/home-page/home-page.component';
-import { LoginComponent } from './modules/login/login.component';
-import { SigninComponent } from './modules/signin/signin.component';
-import { LayloutComponent } from './modules/layout/laylout/laylout.component';
+import { CommonModule } from '@angular/common';
+import { LayoutModule } from './modules/layout/layout.module';
+// import { HomePageComponent } from './modules/home-page/home-page.component';
+// import { SigninComponent } from './modules/signin/signin.component';
+// import { LayoutModule } from './modules/layout/layout.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SigninComponent,
-    HomePageComponent,
-    LoginComponent,
-    LayloutComponent
+    // SigninComponent,
+    // HomePageComponent,
   ],
   imports: [
+    CommonModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
