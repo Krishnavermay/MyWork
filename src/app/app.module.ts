@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { LayoutModule } from './modules/layout/layout.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 // import { HomePageComponent } from './modules/home-page/home-page.component';
 // import { SigninComponent } from './modules/signin/signin.component';
 // import { LayoutModule } from './modules/layout/layout.module';
@@ -19,7 +20,8 @@ import { LayoutModule } from './modules/layout/layout.module';
     CommonModule,
     BrowserModule,
     AppRoutingModule,
-    LayoutModule
+    LayoutModule,
+    NgbModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -23,34 +23,12 @@ const routes: Routes = [
       {
         path: 'home',
         loadChildren: () => import('./modules/home-page/home-page.module').then(m => m.HomePageModule)
+      }, {
+        path: 'signin',
+        loadChildren: () => import('./modules/signin/signin.module').then(m => m.SigninModule)
       }
     ]
   },
-  // {
-  //   path: 'login',
-  //   data: {
-  //     title: 'login'
-  //   },
-  //   children: [
-  //     {
-  //       path: '',
-  //       loadChildren: () => import('./modules/login/login.module').then(m => m.LoginModule)
-  //     }
-  //   ]
-  // },
-  // {
-//     {
-//     path: 'home',
-//     data: {
-//       title: 'home'
-//     },
-//     children: [
-//       {
-//         path: '',
-//         loadChildren: () => import('./modules/home-page/home-page.module').then(m => m.HomePageModule)
-//       }
-//     ]
-//   },
 
 ];
 
