@@ -39,6 +39,10 @@ const routes: Routes = [
       {
         path: 'about',
         loadChildren: () => import('./modules/about/about.module').then(m => m.AboutModule)
+      },
+      {
+        path: 'map',
+        loadChildren:() =>import('./modules/google-map/google-map.module').then(m => m.GoogleMapModule)
       }
     ]
   },
